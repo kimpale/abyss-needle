@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyss Needle | Kimpale Studio</title>
+    <title>Abyss Needle | Kimpale</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,16 +63,20 @@
         .hero-bg {
             background-image: 
                 linear-gradient(to bottom, rgba(3,3,5,0.4) 0%, rgba(3,3,5,1) 100%),
-                url('https://placehold.co/1920x1080/08080c/333333?text=UE5+Gameplay+Footage+Placeholder');
+                url('Disposal.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Glitch/Glow Typography */
-        .title-glow {
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1);
-            letter-spacing: -0.05em;
+        /* Cinematic Logo Glow */
+        .logo-glow {
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+            transition: filter 0.3s ease;
+        }
+        
+        .logo-glow:hover {
+            filter: drop-shadow(0 0 40px rgba(45, 212, 191, 0.3)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
         }
 
         /* Custom UI Elements */
@@ -108,16 +112,15 @@
     <!-- Navigation -->
     <header class="absolute top-0 w-full p-6 md:p-10 z-30 flex justify-between items-center">
         <div class="display-font text-sm md:text-base font-bold tracking-[0.3em] text-white/70 uppercase">
-            Kimpale Studio
+            Kimpale
         </div>
         <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse shadow-[0_0_8px_#2dd4bf]"></div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 relative z-20 pt-20">
-        <h1 class="title-glow text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 uppercase">
-            Abyss<br/>Needle
-        </h1>
+        
+        <img src="AbyssNeedle_Transp_Cropped.jpg" alt="Abyss Needle" class="logo-glow w-72 md:w-96 lg:w-[40rem] mb-10 object-contain">
         
         <p class="max-w-2xl text-lg md:text-xl text-gray-400 mb-12 leading-relaxed font-light">
             Survive the oppressive, abandoned interiors of a derelict toroidal starship. A next-generation sci-fi horror experience where physics, sparse light, and unrelenting AI react to your every breath.
@@ -182,37 +185,63 @@
         </div>
     </section>
 
-    <!-- Environments Section -->
-    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-20 border-t border-white/5">
-        <div class="mb-16 md:mb-24 text-right">
-            <h2 class="text-3xl md:text-5xl text-white uppercase tracking-wider mb-2">The Vessel</h2>
+    <!-- Environments / Chapters Section -->
+    <section class="py-24 px-6 md:px-12 max-w-[96rem] mx-auto relative z-20 border-t border-white/5">
+        <div class="mb-16 md:mb-24 text-right max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl text-white uppercase tracking-wider mb-2">The Chapters</h2>
             <div class="accent-line ml-auto"></div>
-            <p class="text-gray-400 max-w-xl ml-auto">A colossal monument to human ambition, now a drifting tomb.</p>
+            <p class="text-gray-400 max-w-xl ml-auto">A colossal monument to human ambition, now a drifting tomb mapped out in distinct dread zones.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Environment 1 -->
-            <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-black">
-                <img src="https://placehold.co/800x600/0a0a0f/333333?text=Environment:+The+Crevice" alt="The Crevice" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 transition-opacity duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8 md:p-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Sector 4</span>
-                    <h3 class="text-2xl md:text-3xl text-white uppercase tracking-wide mb-2">The Crevice</h3>
-                    <p class="text-gray-400 text-sm max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        A massive structural fracture separating the habitat ring. Navigate exposed girders and failing gravity plating over a bottomless void.
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Chapter: Forest -->
+            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm bg-black border border-white/5">
+                <img src="Screenshot 2026-08-26 220005.jpg" alt="Forest" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Chapter I</span>
+                    <h3 class="text-xl md:text-2xl text-white uppercase tracking-wide mb-2">Forest</h3>
+                    <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed">
+                        Ancient, overgrown paths where shadows stretch long and every rustle signals a predator closing in.
                     </p>
                 </div>
             </div>
 
-            <!-- Environment 2 -->
-            <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-black">
-                <img src="https://placehold.co/800x600/0a0a0f/333333?text=Environment:+Research+Tower" alt="Research Tower" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 transition-opacity duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8 md:p-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Core Hub</span>
-                    <h3 class="text-2xl md:text-3xl text-white uppercase tracking-wide mb-2">Research Tower</h3>
-                    <p class="text-gray-400 text-sm max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        The epicenter of the outbreak. Claustrophobic corridors choked with strange organic growths and flickering emergency lights.
+            <!-- Chapter: The Crevice -->
+            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm bg-black border border-white/5">
+                <img src="Screenshot 2026-08-26 221032.jpg" alt="The Crevice" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Chapter II</span>
+                    <h3 class="text-xl md:text-2xl text-white uppercase tracking-wide mb-2">The Crevice</h3>
+                    <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed">
+                        A massive structural fracture separating the habitat ring. Navigate exposed girders over a bottomless void.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chapter: The Main Entrance -->
+            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm bg-black border border-white/5">
+                <img src="Screenshot 2026-08-26 223708.jpg" alt="The Main Entrance" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Chapter III</span>
+                    <h3 class="text-xl md:text-2xl text-white uppercase tracking-wide mb-2">The Main Entrance</h3>
+                    <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed">
+                        The gaping maw of the facility. A grand threshold standing between the forgotten world and the nightmare within.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chapter: Research Tower -->
+            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm bg-black border border-white/5">
+                <img src="Research_Tower.jpg" alt="Research Tower" class="object-cover w-full h-full opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="text-teal-500 display-font text-xs tracking-[0.2em] uppercase mb-2 block">Chapter IV</span>
+                    <h3 class="text-xl md:text-2xl text-white uppercase tracking-wide mb-2">Research Tower</h3>
+                    <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed">
+                        The epicenter of the outbreak. Claustrophobic corridors choked with strange organic growths and flickering lights.
                     </p>
                 </div>
             </div>
@@ -225,8 +254,8 @@
             
             <!-- Branding -->
             <div class="text-center md:text-left">
-                <h4 class="display-font text-xl text-white tracking-[0.2em] uppercase mb-2">Kimpale Studio</h4>
-                <p class="text-gray-500 text-sm">&copy; 2026 Kimpale Studio. All rights reserved.</p>
+                <h4 class="display-font text-xl text-white tracking-[0.2em] uppercase mb-2">Kimpale</h4>
+                <p class="text-gray-500 text-sm">&copy; 2026 Kimpale. All rights reserved.</p>
             </div>
 
             <!-- Social Links -->
